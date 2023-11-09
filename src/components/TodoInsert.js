@@ -1,10 +1,28 @@
 import React from "react";
 import {MdAdd} from 'react-icons/md'
 import styled from 'styled-components';
-export const TodoInsert = () => {
+import {useState} from 'react';
+
+export const TodoInsert = ({inputInsert}) => {
+
+    const [value, setValue] = useState("");
+
+    const onChange = (g) => {
+        setValue(g.target.value)
+    };
+
+    const formSubmit=(e) => {
+        inputInsert(value);
+        setValue('');
+        e.preventDefault();
+    }
+
     return(
-        <InsertBox>
-            <input placeholder="할 일을 입력"></input>
+        <InsertBox onSubmit={formSubmit}>
+            <input placeholder="할 일을 입력"
+                    value = {value}
+                    onChange = {onChange}
+            />
             <button>
                 <MdAdd/>
             </button>
@@ -13,7 +31,7 @@ export const TodoInsert = () => {
 
 };
 
-const InsertBox = styled.div`
+const InsertBox = styled.form`
     display: flex;
     background: #495057;
 
