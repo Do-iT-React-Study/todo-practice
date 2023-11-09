@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const TodoTemplate = ({ children }) =>  {
+export const TodoTemplate = ({ children }) => {
   return (
     <TemplateBox>
       <div className="app-title">일정 관리</div>

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 import cn from 'classnames';
 
-export const TodoListItem = ({ todo, onRemove, onToggle }) => {
+export const TodoListItem = ({ todo, onRemove, onToggle }) =>  {
   // console.log(todo);
 
   const { id, text, checked } = todo;
