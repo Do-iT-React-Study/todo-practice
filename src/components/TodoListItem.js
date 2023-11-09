@@ -7,18 +7,18 @@ import styled from 'styled-components';
 
 import cn from 'classnames';
 
-export const TodoListItem = ({ todo }) => {
-  console.log(todo);
+export const TodoListItem = ({ todo, onRemove, onToggle }) => {
+  // console.log(todo);
 
   const { id, text, checked } = todo;
 
   return (
     <ItemBox>
-      <div className={cn('checkbox', { checked })}>
+      <div className={cn('checkbox', { checked })} onClick={() => onToggle(id)}>
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
-      <div className="remove">
+      <div className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
       </div>
     </ItemBox>
