@@ -5,12 +5,18 @@ import {
 } from 'react-icons/md';
 import styled from 'styled-components';
 
-export const TodoListItem = () => {
+import cn from 'classnames';
+
+export const TodoListItem = ({ todo }) => {
+  console.log(todo);
+
+  const { id, text, checked } = todo;
+
   return (
     <ItemBox>
-      <div className="checkbox">
-        <MdCheckBoxOutlineBlank />
-        <div className="text">to do를 적을겁니다.</div>
+      <div className={cn('checkbox', { checked })}>
+        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <div className="text">{text}</div>
       </div>
       <div className="remove">
         <MdRemoveCircleOutline />

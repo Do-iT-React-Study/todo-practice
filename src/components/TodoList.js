@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { TodoListItem } from './TodoListItem';
 
-export const TodoList = () => {
+export const TodoList = ({ todos }) => {
   return (
     <ListBox>
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
+      {todos.map((item) => (
+        <TodoListItem key={item.id} todo={item} />
+      ))}
     </ListBox>
   );
 };
