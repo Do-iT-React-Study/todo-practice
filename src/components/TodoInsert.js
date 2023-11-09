@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { MdAdd } from 'react-icons/md';
 import styled from 'styled-components';
 
-export const TodoInsert = ({ inputInsert }) => {
+export const TodoInsert = ({ inputInsert }) =>  {
   const [value, setValue] = useState('');
 
   const onChange = (e) => {

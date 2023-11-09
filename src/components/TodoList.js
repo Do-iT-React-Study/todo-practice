@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { TodoListItem } from './TodoListItem';
 
-export const TodoList = ({ todos, onRemove, onToggle }) => {
+export const TodoList = ({ todos, onRemove, onToggle }) =>  {
   return (
     <ListBox>
       {todos.map((item) => (

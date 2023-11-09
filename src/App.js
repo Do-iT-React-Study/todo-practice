@@ -6,7 +6,7 @@ import { TodoList } from './components/TodoList';
 import { useRef, useState } from 'react';
 
 function App() {
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] =  useState([
     {
       id: 1,
       text: '성호관에서 스터디하기',
